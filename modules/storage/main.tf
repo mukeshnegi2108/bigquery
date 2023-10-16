@@ -14,8 +14,8 @@ resource "google_storage_bucket" "my_bucket" {
 resource "google_storage_bucket_acl" "bigquery_acl" {
   bucket = google_storage_bucket.my_bucket.name
 
-  role_entity {
-    entity    = "projectViewer"  # Assign the appropriate role for BigQuery access
-    entity_id = var.project
-  }
+  # role_entity {
+  #   entity    = "projectViewer"  # Assign the appropriate role for BigQuery access
+  #   entity_id = var.project
+  # }
 }
